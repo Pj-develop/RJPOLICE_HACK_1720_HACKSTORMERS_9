@@ -3,7 +3,9 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.index, name='base'),
+    path('', views.dash_plot, name='base'),
+    
     path('addcase/', views.addcase, name='addcase'),
-    path('index/', views.index, name='index'),
+    path('aichat/', views.aichat, name='aichat'),
+    path('index/', views.dash_plot, name='index'),
 ]

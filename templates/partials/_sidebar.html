@@ -1,7 +1,7 @@
 {%load static%}
 
 <div class="container-fluid">
-  <div class="row">
+  
     <div
       class="sidebar border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary"
     >
@@ -123,12 +123,15 @@
                 Settings
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
-                <svg class="bi"><use xlink:href="#door-closed" /></svg>
-                Sign out
-              </a>
-            </li>
+            <form action>
+              {% csrf_token %}
+              <li class="nav-item">
+                <a class="nav-link d-flex align-items-center gap-2" href="#">
+                  <svg class="bi"><use xlink:href="#door-closed" /></svg>
+                  Sign out
+                </a>
+              </li>
+            </form>
           </ul>
         </div>
       </div>

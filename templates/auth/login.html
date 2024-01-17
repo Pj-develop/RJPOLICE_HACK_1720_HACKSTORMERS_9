@@ -1,9 +1,74 @@
-{% extends "base_auth.html" %} {% block title %}Login{% endblock %} {% block
-content %}
+{% extends "base_auth.html" %} {% load static %} {% block content %}
 
-<div class="card">
-  <div class="card-body">
-    <h1>Login</h1>
+<div class="mask d-flex align-items-center h-100 gradient-custom-3">
+  <div class="container h-100">
+
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+        <br><br><br><br>
+
+        <div class="card" style="border-radius: 15px">
+          <div class="card-body p-5">
+            <br>
+            <h2 class="text-uppercase text-center mb-5">Login Into account</h2>
+            {% include 'partials/_messages.html' %}
+          
+
+            <form action={% url 'login'%} method="post">
+              {% csrf_token %}
+                
+              <div class="form-outline mb-4">
+                <input
+                  type="text"
+                  id="username"
+                  value="{{request.POST.username}}"
+                  name="username"
+                  placeholder="Username"
+                  class="form-control form-control-lg"
+                />
+                <div class="invalid-feedback" style="display: none"></div>
+              </div>
+              <p class="text-sm text-success usernamesuccess"></p>
+
+              <br>
+              <div class="form-outline mb-4">
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                  id="password"
+                  class="form-control form-control-lg"
+                />
+              </div>
+              <div class="d-flex justify-content-center">
+                <input
+                  value="Login"
+                  type="submit"
+                  id="loginbtn"
+                  class="btn btn-success btn-block btn-lg gradient-custom-4 text-body login-btn"
+                >
+                
+              </input>
+              </div>
+
+              <p class="text-center text-muted mt-5 mb-0">
+                Do not have an account?
+                <a href="{% url 'register'%}" class="fw-bold text-body"><u>Sign Up here</u></a>
+              </p>
+            </form>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br> <br><br>
   </div>
+  
 </div>
-{% endblock%}
+
+<!--yha se pdf export shuru-->
+
+<a href="{% url 'export_to_pdf'%}" class="btn btn-primary">Export to PDF</a>
+<script src="{% static 'js/login.js' %}"></script>
+
+{% endblock%} {% block title %}Login {% endblock%}
