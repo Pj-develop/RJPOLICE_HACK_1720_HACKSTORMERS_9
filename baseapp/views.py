@@ -23,3 +23,8 @@ def aichat(request):
 
 def addcase(request):
     return render(request,'baseapp/addcase.html')
+
+
+
+def home(request):
+    return render(request,'index.html')

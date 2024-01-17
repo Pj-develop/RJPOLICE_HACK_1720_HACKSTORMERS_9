@@ -12,7 +12,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap);
 :root,
 [data-bs-theme="light"] {
-  --bs-blue: #2c3e50;
+  --bs-blue: #f70418;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
   --bs-pink: #e83e8c;
@@ -106,7 +106,7 @@
   --bs-tertiary-bg: #f8f9fa;
   --bs-tertiary-bg-rgb: 248, 249, 250;
   --bs-heading-color: inherit;
-  --bs-link-color: #18bc9c;
+  --bs-link-color: #bc1818;
   --bs-link-color-rgb: 24, 188, 156;
   --bs-link-decoration: underline;
   --bs-link-hover-color: #13967d;

@@ -31,40 +31,40 @@
               <a
                 class="nav-link d-flex align-items-center gap-2 active"
                 aria-current="page"
-                href="#"
+                href="{% url 'viewcase'%}"
               >
                 <svg class="bi"><use xlink:href="#house-fill" /></svg>
                 Dashboard
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
+              <a class="nav-link d-flex align-items-center gap-2" href="{% url 'viewcase'%}">
                 <svg class="bi"><use xlink:href="#file-earmark" /></svg>
                 Orders
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
+              <a class="nav-link d-flex align-items-center gap-2" href="{% url 'viewcase'%}">
                 <svg class="bi"><use xlink:href="#cart" /></svg>
                 Products
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
+              <a class="nav-link d-flex align-items-center gap-2" href="{% url 'viewcase'%}">
                 <svg class="bi"><use xlink:href="#people" /></svg>
                 Customers
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
+              <a class="nav-link d-flex align-items-center gap-2" href="{% url 'index'%}">
                 <svg class="bi"><use xlink:href="#graph-up" /></svg>
                 Reports
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
+              <a class="nav-link d-flex align-items-center gap-2" href="{% url 'aichat'%}">
                 <svg class="bi"><use xlink:href="#puzzle" /></svg>
-                Integrations
+                AI Legal Chatbot
               </a>
             </li>
           </ul>
@@ -72,42 +72,42 @@
           <h6
             class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-body-secondary text-uppercase"
           >
-            <span>Saved reports</span>
-            <a class="link-secondary" href="#" aria-label="Add a new report">
+            <span>Reports</span>
+            <a class="link-secondary" href="#" aria-label="Generate PDF of Report">
               <svg class="bi"><use xlink:href="#plus-circle" /></svg>
             </a>
           </h6>
           <ul class="nav flex-column mb-auto">
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
+              <a class="nav-link d-flex align-items-center gap-2" href="{% url 'aichat'%}">
                 <svg class="bi">
                   <use xlink:href="#file-earmark-text" />
                 </svg>
-                Current month
+                AI Chatbot
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
+              <a class="nav-link d-flex align-items-center gap-2" href="{% url 'index'%}">
                 <svg class="bi">
                   <use xlink:href="#file-earmark-text" />
                 </svg>
-                Last quarter
+                AI Report
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
+              <a class="nav-link d-flex align-items-center gap-2" href="{% url 'export_to_pdf'%}">
                 <svg class="bi">
                   <use xlink:href="#file-earmark-text" />
                 </svg>
-                Social engagement
+                Email Report
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
+              <a class="nav-link d-flex align-items-center gap-2" href="{% url 'addcase'%}">
                 <svg class="bi">
                   <use xlink:href="#file-earmark-text" />
                 </svg>
-                Year-end sale
+                Add Case
               </a>
             </li>
           </ul>
@@ -116,11 +116,11 @@
 
           <ul class="nav flex-column mb-auto">
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
+              <a class="nav-link d-flex align-items-center gap-2" href="{% url 'viewcase'%}">
                 <svg class="bi">
                   <use xlink:href="#gear-wide-connected" />
                 </svg>
-                Settings
+                View Case
               </a>
             </li>
             <form action>
