@@ -23,6 +23,258 @@ def Ackno():
     str1 = 'CYBER' + str(Ackno)
     return str1
 
+
+def hdfcapi(request):
+    apiexp='''
+    <pre>
+      CustomerInformation API Gateway Service URL's UAT Endpoint :-
+      https://api-uat.hdfcbank.com/API/CustomerInformation PROD Endpoint :-
+      https://api.hdfcbank.com/API/CustomerInformation API :
+      https://api-tryitout-uat.hdfcbank.com/aHNDiZ5fj52HXscBQMBEJwdG3BBNjBNNaeCyKt5ff4DL6RmO
+      Request :
+      <?xml version="1.0" encoding="UTF-8"?>
+      <soapenv:Envelope
+        xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:soas="soaserver.xsd.hdfcbank.com"
+      >
+        <soapenv:Header> </soapenv:Header>
+        <soapenv:Body>
+          <soas:AccountServiceRequest>
+            <accountId> </accountId>
+            <sourceId> </sourceId>
+            <customerId> </customerId>
+            <PanNo>BVVPM4039E</PanNo>
+            <AadharNo> </AadharNo>
+            <MobileNo>8440006083</MobileNo>
+            <UCICNo> </UCICNo>
+            <soaFillers>
+              <filler1> </filler1>
+              <filler2> </filler2>
+              <filler3> </filler3>
+              <filler4> </filler4>
+              <filler5> </filler5>
+            </soaFillers>
+            <soaStandard>
+              <service_user> </service_user>
+              <service_password> </service_password>
+              <consumer_name> </consumer_name>
+              <unique_id> </unique_id>
+              <time_stamp> </time_stamp>
+            </soaStandard>
+          </soas:AccountServiceRequest>
+        </soapenv:Body>
+      </soapenv:Envelope>
+
+      response :
+
+      <?xml version="1.0" encoding="UTF-8"?>
+      <soapenv:Envelope
+        xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+      >
+        <soapenv:Body>
+          <a:ServiceResponse xmlns:a="soaserver.xsd.hdfcbank.com">
+            <SAS_DIM_DEDUPE_OUTPUT>
+              <ALL_ACCOUNT>
+                <ACCOUNT_INFO>
+                  <CUSTOMER_ID>56481406</CUSTOMER_ID>
+                  <ACCOUNTID> </ACCOUNTID>
+                  <SOURCE_ID>FINNESS</SOURCE_ID>
+                  <SAS_ID>34241147</SAS_ID>
+                  <FW_CUST_ID>34241147</FW_CUST_ID>
+                  <FW_ACCNT_NUM>1681050195505</FW_ACCNT_NUM>
+                  <V_D_CUST_FIRST_NAME>SANTOSH</V_D_CUST_FIRST_NAME>
+                  <V_D_CUST_MIDDLE_NAME>KUMAR</V_D_CUST_MIDDLE_NAME>
+                  <V_D_CUST_LAST_NAME>MAHTO</V_D_CUST_LAST_NAME>
+                  <D_D_CUST_START_DATE>2017-04-05 00:00:00</D_D_CUST_START_DATE>
+                  <D_D_CUST_CLOSED_DATE
+                    >2020-02-29 00:00:00</D_D_CUST_CLOSED_DATE
+                  >
+                  <V_D_CUST_CHANNEL1_CODE>0007</V_D_CUST_CHANNEL1_CODE>
+                  <V_D_CUST_CHANNEL2_CODE>24050</V_D_CUST_CHANNEL2_CODE>
+                  <V_D_CUST_BRANCH_CODE>BWADI_RIICO</V_D_CUST_BRANCH_CODE>
+                  <D_D_CUST_DATE_OF_BIRTH
+                    >1985-08-15 00:00:00</D_D_CUST_DATE_OF_BIRTH
+                  >
+                  <V_D_CUST_PROFESSION>SALASERV</V_D_CUST_PROFESSION>
+                  <V_D_CUST_GENDER>M</V_D_CUST_GENDER>
+                  <F_D_CUST_STAFF_IND>N</F_D_CUST_STAFF_IND>
+                  <V_D_CUST_MARITAL_STATUS>MS1</V_D_CUST_MARITAL_STATUS>
+                  <N_D_CUST_DEPENDENTS>1</N_D_CUST_DEPENDENTS>
+                  <V_D_CUST_EDUCATION>GRAD</V_D_CUST_EDUCATION>
+                  <N_D_CUST_MONTHLY_INCOME>0</N_D_CUST_MONTHLY_INCOME>
+                  <N_D_CUST_ANNUAL_INCOME>0</N_D_CUST_ANNUAL_INCOME>
+                  <V_D_CUST_EMP_COMPANY
+                    >JAQUAR AND COMPANY PVT LTD</V_D_CUST_EMP_COMPANY
+                  >
+                  <V_D_CUST_ADD1>JAQUAR AND COMPANY LTD</V_D_CUST_ADD1>
+                  <V_D_CUST_ADD2>SP-53</V_D_CUST_ADD2>
+                  <V_D_CUST_ADD3>RIICO IND AREA BHIWADI</V_D_CUST_ADD3>
+                  <V_D_CUST_ZIP_CODE>301019</V_D_CUST_ZIP_CODE>
+                  <V_D_CUST_JOB_TITLE> </V_D_CUST_JOB_TITLE>
+                  <V_D_CUST_OFF_ADR1>SP 53 RIICO IND AREA</V_D_CUST_OFF_ADR1>
+                  <V_D_CUST_OFF_ADR2>BHIWADI</V_D_CUST_OFF_ADR2>
+                  <V_D_CUST_OFF_ADR3> </V_D_CUST_OFF_ADR3>
+                  <V_D_CUST_OFF_ZIP_CODE>301019</V_D_CUST_OFF_ZIP_CODE>
+                  <V_D_CUST_TYPE_ORIGIN> </V_D_CUST_TYPE_ORIGIN>
+                  <V_D_CUST_RESIDENCE_TYPE>NOT AVAI</V_D_CUST_RESIDENCE_TYPE>
+                  <N_D_CUST_JOINING_AGE>31</N_D_CUST_JOINING_AGE>
+                  <F_D_CUST_MISSING_IND> </F_D_CUST_MISSING_IND>
+                  <D_D_CUST_REESTB_DATE> </D_D_CUST_REESTB_DATE>
+                  <V_D_CUST_TITLE>MR</V_D_CUST_TITLE>
+                  <V_D_CUST_ADD4> </V_D_CUST_ADD4>
+                  <V_D_CUST_CITY>BHIWADI</V_D_CUST_CITY>
+                  <V_D_CUST_STATE>RAJASTHAN</V_D_CUST_STATE>
+                  <V_D_CUST_COUNTRY> </V_D_CUST_COUNTRY>
+                  <V_D_CUST_EMAIL_ADD> </V_D_CUST_EMAIL_ADD>
+                  <V_D_CUST_MOBILE_PHONE>8440006083</V_D_CUST_MOBILE_PHONE>
+                  <V_D_CUST_IT_NBR>BVVPM4039E</V_D_CUST_IT_NBR>
+                  <V_D_CUST_NET_ANNUAL_INCOME>0</V_D_CUST_NET_ANNUAL_INCOME>
+                  <V_D_CUST_FULL_NAME>SANTOSH KUMAR MAHTO</V_D_CUST_FULL_NAME>
+                  <V_D_CUST_SPOUSE_NAME> </V_D_CUST_SPOUSE_NAME>
+                  <V_D_CUST_NAME_SHORT>NULL</V_D_CUST_NAME_SHORT>
+                  <V_D_CUST_SPOUSE_OCCU>NULL</V_D_CUST_SPOUSE_OCCU>
+                  <V_D_CUST_RESI_PHONE> </V_D_CUST_RESI_PHONE>
+                  <V_D_CUST_OFF_PHONE>8440006083</V_D_CUST_OFF_PHONE>
+                  <V_D_CUST_NATL_ID>NULL</V_D_CUST_NATL_ID>
+                  <V_D_CUST_OFF_EMAIL_ADD> </V_D_CUST_OFF_EMAIL_ADD>
+                  <UPDATE_DT> </UPDATE_DT>
+                  <STANDARDIZED_CITY> </STANDARDIZED_CITY>
+                  <V_D_CUST_MTHR_MADN_NAME> </V_D_CUST_MTHR_MADN_NAME>
+                  <V_D_SECOND_HOLDER> </V_D_SECOND_HOLDER>
+                  <V_D_THIRD_HOLDER> </V_D_THIRD_HOLDER>
+                  <V_D_CUST_IT_PAN2> </V_D_CUST_IT_PAN2>
+                  <V_D_CUST_IT_PAN3> </V_D_CUST_IT_PAN3>
+                  <V_D_CUST_TYPE> </V_D_CUST_TYPE>
+                  <REL_TYPE> </REL_TYPE>
+                  <DEBIT_SCORE_PL> </DEBIT_SCORE_PL>
+                  <DEBIT_SCORE_BL> </DEBIT_SCORE_BL>
+                  <DEBIT_SCORE_AL> </DEBIT_SCORE_AL>
+                  <DEBIT_SCORE_CARDS> </DEBIT_SCORE_CARDS>
+                  <CNC_BEHAV_SCORE> </CNC_BEHAV_SCORE>
+                  <CARD_BEHAV_SCORE> </CARD_BEHAV_SCORE>
+                  <BEHAV_SCORE1> </BEHAV_SCORE1>
+                  <BEHAV_SCORE2> </BEHAV_SCORE2>
+                  <TOTAL_UNSECURE_PA_AMT> </TOTAL_UNSECURE_PA_AMT>
+                  <TOTAL_PA_AMT> </TOTAL_PA_AMT>
+                  <BEHAVIORAL_SCORE3> </BEHAVIORAL_SCORE3>
+                  <BEHAVIORAL_SCORE4> </BEHAVIORAL_SCORE4>
+                  <BEHAVIORAL_SCORE5> </BEHAVIORAL_SCORE5>
+                  <BEHAVIORAL_SCORE6> </BEHAVIORAL_SCORE6>
+                  <BEHAVIORAL_SCORE7> </BEHAVIORAL_SCORE7>
+                  <ETHNIC_CODE> </ETHNIC_CODE>
+                  <PRODUCT_CODE> </PRODUCT_CODE>
+                  <PRODUCT_DESCRIPTION> </PRODUCT_DESCRIPTION>
+                  <PRODUCT_TYPE> </PRODUCT_TYPE>
+                  <AadharNo> </AadharNo>
+                </ACCOUNT_INFO>
+                <ACCOUNT_INFO>
+                  <CUSTOMER_ID>97762471</CUSTOMER_ID>
+                  <ACCOUNTID> </ACCOUNTID>
+                  <SOURCE_ID>FINNESS</SOURCE_ID>
+                  <SAS_ID>34241147</SAS_ID>
+                  <FW_CUST_ID>34241147</FW_CUST_ID>
+                  <FW_ACCNT_NUM>01681050195505</FW_ACCNT_NUM>
+                  <V_D_CUST_FIRST_NAME>SANTOSH</V_D_CUST_FIRST_NAME>
+                  <V_D_CUST_MIDDLE_NAME>KUMAR</V_D_CUST_MIDDLE_NAME>
+                  <V_D_CUST_LAST_NAME>MAHTO</V_D_CUST_LAST_NAME>
+                  <D_D_CUST_START_DATE>2020-02-28 00:00:00</D_D_CUST_START_DATE>
+                  <D_D_CUST_CLOSED_DATE> </D_D_CUST_CLOSED_DATE>
+                  <V_D_CUST_CHANNEL1_CODE>9099</V_D_CUST_CHANNEL1_CODE>
+                  <V_D_CUST_CHANNEL2_CODE>54395</V_D_CUST_CHANNEL2_CODE>
+                  <V_D_CUST_BRANCH_CODE> </V_D_CUST_BRANCH_CODE>
+                  <D_D_CUST_DATE_OF_BIRTH
+                    >1984-07-01 00:00:00</D_D_CUST_DATE_OF_BIRTH
+                  >
+                  <V_D_CUST_PROFESSION>SALAMANU</V_D_CUST_PROFESSION>
+                  <V_D_CUST_GENDER>M</V_D_CUST_GENDER>
+                  <F_D_CUST_STAFF_IND>N</F_D_CUST_STAFF_IND>
+                  <V_D_CUST_MARITAL_STATUS>MS1</V_D_CUST_MARITAL_STATUS>
+                  <N_D_CUST_DEPENDENTS>1</N_D_CUST_DEPENDENTS>
+                  <V_D_CUST_EDUCATION>GRAD</V_D_CUST_EDUCATION>
+                  <N_D_CUST_MONTHLY_INCOME>0</N_D_CUST_MONTHLY_INCOME>
+                  <N_D_CUST_ANNUAL_INCOME>0</N_D_CUST_ANNUAL_INCOME>
+                  <V_D_CUST_EMP_COMPANY
+                    >JAQUAR AND COMPANY PVT LTD</V_D_CUST_EMP_COMPANY
+                  >
+                  <V_D_CUST_ADD1>S/O SANTOSH KUMAR S/O TUNTUN M</V_D_CUST_ADD1>
+                  <V_D_CUST_ADD2
+                    >C/O RISHAL COLONY VILL SANTHALKA POST</V_D_CUST_ADD2
+                  >
+                  <V_D_CUST_ADD3>BHIWADI ALWAR RAJASTHAN 301019</V_D_CUST_ADD3>
+                  <V_D_CUST_ZIP_CODE>301019</V_D_CUST_ZIP_CODE>
+                  <V_D_CUST_JOB_TITLE> </V_D_CUST_JOB_TITLE>
+                  <V_D_CUST_OFF_ADR1
+                    >SP 53 RICO INDL AREA BHIWADI</V_D_CUST_OFF_ADR1
+                  >
+                  <V_D_CUST_OFF_ADR2> </V_D_CUST_OFF_ADR2>
+                  <V_D_CUST_OFF_ADR3> </V_D_CUST_OFF_ADR3>
+                  <V_D_CUST_OFF_ZIP_CODE>301019</V_D_CUST_OFF_ZIP_CODE>
+                  <V_D_CUST_TYPE_ORIGIN> </V_D_CUST_TYPE_ORIGIN>
+                  <V_D_CUST_RESIDENCE_TYPE>NOT AVAI</V_D_CUST_RESIDENCE_TYPE>
+                  <N_D_CUST_JOINING_AGE>35</N_D_CUST_JOINING_AGE>
+                  <F_D_CUST_MISSING_IND> </F_D_CUST_MISSING_IND>
+                  <D_D_CUST_REESTB_DATE> </D_D_CUST_REESTB_DATE>
+                  <V_D_CUST_TITLE>MR.</V_D_CUST_TITLE>
+                  <V_D_CUST_ADD4> </V_D_CUST_ADD4>
+                  <V_D_CUST_CITY>BHIWADI</V_D_CUST_CITY>
+                  <V_D_CUST_STATE>RAJASTHAN</V_D_CUST_STATE>
+                  <V_D_CUST_COUNTRY> </V_D_CUST_COUNTRY>
+                  <V_D_CUST_EMAIL_ADD
+                    >SSANTOSHKUMA4@GMAIL.COM</V_D_CUST_EMAIL_ADD
+                  >
+                  <V_D_CUST_MOBILE_PHONE>8440006083</V_D_CUST_MOBILE_PHONE>
+                  <V_D_CUST_IT_NBR>BVVPM4039E</V_D_CUST_IT_NBR>
+                  <V_D_CUST_NET_ANNUAL_INCOME>0</V_D_CUST_NET_ANNUAL_INCOME>
+                  <V_D_CUST_FULL_NAME>SANTOSH KUMAR MAHTO</V_D_CUST_FULL_NAME>
+                  <V_D_CUST_SPOUSE_NAME> </V_D_CUST_SPOUSE_NAME>
+                  <V_D_CUST_NAME_SHORT>NULL</V_D_CUST_NAME_SHORT>
+                  <V_D_CUST_SPOUSE_OCCU>NULL</V_D_CUST_SPOUSE_OCCU>
+                  <V_D_CUST_RESI_PHONE> </V_D_CUST_RESI_PHONE>
+                  <V_D_CUST_OFF_PHONE>246808</V_D_CUST_OFF_PHONE>
+                  <V_D_CUST_NATL_ID>NULL</V_D_CUST_NATL_ID>
+                  <V_D_CUST_OFF_EMAIL_ADD> </V_D_CUST_OFF_EMAIL_ADD>
+                  <UPDATE_DT> </UPDATE_DT>
+                  <STANDARDIZED_CITY> </STANDARDIZED_CITY>
+                  <V_D_CUST_MTHR_MADN_NAME> </V_D_CUST_MTHR_MADN_NAME>
+                  <V_D_SECOND_HOLDER> </V_D_SECOND_HOLDER>
+                  <V_D_THIRD_HOLDER> </V_D_THIRD_HOLDER>
+                  <V_D_CUST_IT_PAN2> </V_D_CUST_IT_PAN2>
+                  <V_D_CUST_IT_PAN3> </V_D_CUST_IT_PAN3>
+                  <V_D_CUST_TYPE> </V_D_CUST_TYPE>
+                  <REL_TYPE> </REL_TYPE>
+                  <DEBIT_SCORE_PL> </DEBIT_SCORE_PL>
+                  <DEBIT_SCORE_BL> </DEBIT_SCORE_BL>
+                  <DEBIT_SCORE_AL> </DEBIT_SCORE_AL>
+                  <DEBIT_SCORE_CARDS> </DEBIT_SCORE_CARDS>
+                  <CNC_BEHAV_SCORE> </CNC_BEHAV_SCORE>
+                  <CARD_BEHAV_SCORE> </CARD_BEHAV_SCORE>
+                  <BEHAV_SCORE1> </BEHAV_SCORE1>
+                  <BEHAV_SCORE2> </BEHAV_SCORE2>
+                  <TOTAL_UNSECURE_PA_AMT> </TOTAL_UNSECURE_PA_AMT>
+                  <TOTAL_PA_AMT> </TOTAL_PA_AMT>
+                  <BEHAVIORAL_SCORE3> </BEHAVIORAL_SCORE3>
+                  <BEHAVIORAL_SCORE4> </BEHAVIORAL_SCORE4>
+                  <BEHAVIORAL_SCORE5> </BEHAVIORAL_SCORE5>
+                  <BEHAVIORAL_SCORE6> </BEHAVIORAL_SCORE6>
+                  <BEHAVIORAL_SCORE7> </BEHAVIORAL_SCORE7>
+                  <ETHNIC_CODE> </ETHNIC_CODE>
+                  <PRODUCT_CODE> </PRODUCT_CODE>
+                  <PRODUCT_DESCRIPTION> </PRODUCT_DESCRIPTION>
+                  <PRODUCT_TYPE> </PRODUCT_TYPE>
+                  <AadharNo> </AadharNo>
+                </ACCOUNT_INFO>
+              </ALL_ACCOUNT>
+              <ERR_CODE>0</ERR_CODE>
+              <ERR_MESSAGE>SUCCESS</ERR_MESSAGE>
+              <soaFillers> </soaFillers>
+            </SAS_DIM_DEDUPE_OUTPUT>
+          </a:ServiceResponse>
+        </soapenv:Body>
+      </soapenv:Envelope>
+    </pre>'''
+
+    return HttpResponse(apiexp)
+
 class ViewCase(View):
     def get(self, request):
         with open(r'D:\Projects\1930Hachathon\Helpline1930\output.json', 'r') as f:

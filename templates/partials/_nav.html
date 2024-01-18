@@ -43,6 +43,11 @@
               >AI Analyze Model
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="{% url 'hdfcapi'%}"
+              >API Integration</a
+            >
+          </li>
         </ul>
         <form action="{% url 'register' %}" class="d-flex" method="post">
           {% csrf_token %}
