@@ -125,6 +125,7 @@
   </head>
   <body>
     {% include 'partials/_messages.html' %}
+    <a id="top">
 
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="check2" viewBox="0 0 16 16">
@@ -253,7 +254,7 @@
       <header class="border-bottom lh-1 py-3">
         <div class="row flex-nowrap justify-content-between align-items-center">
           <div class="col-4 pt-1">
-            <a class="link-secondary" href="{% url 'index' %}">Home Page</a>
+            <a class="link-secondary" href="{% url 'home' %}">Home Page</a>
           </div>
           <div class="col-4 text-center">
             <a
@@ -295,7 +296,7 @@
         <nav class="nav nav-underline justify-content-between">
           <a
             class="nav-item nav-link link-body-emphasis active"
-            href="{% url 'index' %}"
+            href="{% url 'home' %}"
             >Home</a
           >
           <a
@@ -315,17 +316,17 @@
           >
           <a
             class="nav-item nav-link link-body-emphasis"
-            href="{% url 'index' %}"
+            href="{% url 'aichat' %}"
             >AI Legal Guidance</a
           >
           <a
             class="nav-item nav-link link-body-emphasis"
-            href="{% url 'index' %}"
+            href="{% url 'analyzeai' %}"
             >AI Dashboard
           </a>
           <a
             class="nav-item nav-link link-body-emphasis"
-            href="{% url 'index' %}"
+            href="{% url 'aichat' %}"
             >APIs</a
           >
         </nav>
@@ -337,8 +338,7 @@
         <div class="col-lg-6 px-0">
           <h1 class="display-4 fst-italic">Your Case Details are :</h1>
           <p class="lead my-3">
-            This is the Case Detail for Any Addition Info. Visit Nearest Police
-            Station
+            {{data.OBJ.brief2}}
           </p>
           <p class="lead mb-0">
             <a
@@ -365,7 +365,7 @@
                 Try the New AI Powered System To Resolve Your Query.
               </p>
               <a
-                href="{% url 'index' %}"
+                href="{% url 'aichat' %}"
                 class="icon-link gap-1 icon-link-hover stretched-link"
               >
                 Click to Use
@@ -436,16 +436,16 @@
       <div class="row g-5">
         <div class="col-md-8">
           <h3 class="pb-4 mb-4 fst-italic border-bottom">
-            Case Details for Acknowledgment No. {{userinfo.ackno}}
+            Case Details for Acknowledgment No. {{data.OBJ.ackno}}
           </h3>
 
           <article class="blog-post">
-            <h2 class="display-5 link-body-emphasis mb-1">{{caseinfo.sub}}</h2>
-            <p class="blog-post-meta">{{caseinfo.date}}</p>
+            <h2 class="display-5 link-body-emphasis mb-1">{{data.OBJ.SubCat}}</h2>
+            <p class="blog-post-meta">{{data.OBJ.Date}}</p>
 
-            <p>{{caseinfo.body}}</p>
+            <p>{{data.OBJ.brief2 }}</p>
             <hr />
-            <p>{{caseinfo.fotter}}</p>
+            <p>{{data.OBJ.PresentAddress }}</p>
             <h3>Suspects If Any</h3>
             <table class="table">
               <thead>
@@ -457,9 +457,10 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>{{susinfo.name}}</td>
-                  <td>{{susinfo.rel}}</td>
-                  <td>{{susinfo.con}}</td>
+                  <td>{{data.OBJ.SuspectedPerson }}</td>
+                  <td>
+                    {{data.OBJ.SuspectedRel }}</td>
+                  <td>{{data.OBJ.SuspectedInfo}}</td>
                 </tr>
                 <tr>
                   <td></td>
@@ -475,12 +476,13 @@
           <article class="blog-post">
             <h2 class="display-5 link-body-emphasis mb-1">Crime Details</h2>
 
-            <p>{{crimeinfo.data}}</p>
+            <p>{{data.OBJ.Category}}</p>
             <ul>
-              <li>Crime Name : {{crimeinfo.name}}</li>
-              <li>Crime Mode : {{crimeinfo.mode}}</li>
-              <li>Crime Category : {{crimeinfo.cat}}</li>
-              <li>Date of Incident : {{crimeinfo.time}}</li>
+              <li>Crime Name : {{data.OBJ.SubCat}}</li>
+              <li>Place of Crime : {{data.OBJ.Place}}</li>
+              <li>Crime Category : {{data.OBJ.SubCat}}</li>
+              <li>Date of Incident : {{data.OBJ.Date}}</li>
+              <li>Is There Any Delay In Reporting ? {{data.OBJ.Delay}}</li>
             </ul>
             <p>
               This is Complaint Only and the Actaul FIR has to be Registerred at
@@ -491,7 +493,7 @@
           <nav class="blog-pagination" aria-label="Pagination">
             <a
               class="btn btn-outline-primary rounded-pill"
-              href="{% url 'index' %}"
+              href="{% url 'login' %}"
               >Status</a
             >
           </nav>
@@ -505,7 +507,7 @@
             </div>
 
             <div>
-              <h4 class="fst-italic">Recent posts</h4>
+              <h4 class="fst-italic">Recent posts On Cyber Crime </h4>
               <ul class="list-unstyled">
                 <li>
                   <a
@@ -524,9 +526,9 @@
                       <rect width="100%" height="100%" fill="#777" />
                     </svg>
                     <div class="col-lg-8">
-                      <h6 class="mb-0">Example blog post title</h6>
+                      <h6 class="mb-0">Recent Cyber Cases  </h6>
                       <small class="text-body-secondary"
-                        >January 15, 2023</small
+                        >January 14, 2024</small
                       >
                     </div>
                   </a>
@@ -534,7 +536,7 @@
                 <li>
                   <a
                     class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
-                    href="#"
+                    href="https://www.tribuneindia.com/news/haryana/11-arrested-in-7-cybercrime-cases-in-a-week-581334"
                   >
                     <svg
                       class="bd-placeholder-img"
@@ -548,9 +550,9 @@
                       <rect width="100%" height="100%" fill="#777" />
                     </svg>
                     <div class="col-lg-8">
-                      <h6 class="mb-0">This is another blog post title</h6>
+                      <h6 class="mb-0">3 arrested from Delhi in Cyber Case</h6>
                       <small class="text-body-secondary"
-                        >January 14, 2023</small
+                        >Nov 27, 2023</small
                       >
                     </div>
                   </a>
@@ -558,7 +560,7 @@
                 <li>
                   <a
                     class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
-                    href="#"
+                    href="https://www.tribuneindia.com/news/himachal/3-arrested-from-delhi-in-cyber-crime-case-176574"
                   >
                     <svg
                       class="bd-placeholder-img"
@@ -572,12 +574,16 @@
                       <rect width="100%" height="100%" fill="#777" />
                     </svg>
                     <div class="col-lg-8">
+                      <a href="https://www.news18.com/business/gangs-of-cyber-world-drained-off-rs-10300-cr-from-india-since-april-2021-govt-body-8727450.html">
                       <h6 class="mb-0">
-                        Longer blog post title: This one has multiple lines!
+                        Gangs Of Cyber World Drained Off Rs 10,300 Cr From India Since April 2021: Govt Body!
+                      <a>
                       </h6>
+
                       <small class="text-body-secondary"
-                        >January 13, 2023</small
+                        >January 04, 2024</small
                       >
+
                     </div>
                   </a>
                 </li>
@@ -617,12 +623,13 @@
 
     <footer class="py-5 text-center text-body-secondary bg-body-tertiary">
       <p>
-        Blog template built for
-        <a href="https://getbootstrap.com/">Bootstrap</a> by
-        <a href="https://twitter.com/mdo">@mdo</a>.
+        <small>
+          This is a project for Cyber Crime Portal. All Rights Reserved &copy;
+          2024
+        </small>
       </p>
       <p class="mb-0">
-        <a href="#">Back to top</a>
+        <a href="#top">Back to top</a>
       </p>
     </footer>
     <script src="{% static 'js/bundle.min.js' %}"></script>

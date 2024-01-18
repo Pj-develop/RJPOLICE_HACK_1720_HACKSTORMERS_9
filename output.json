@@ -1,0 +1,32 @@
+{
+  "OBJ": {
+    "LoginId": "Himanshu",
+    "SuspectedPerson": "Sandarbh Bajpai",
+    "SuspectedInfo": "+91-7987896788",
+    "SuspectedRel": "Unknown",
+    "Name": "Abhay Kumar",
+    "UID": "1234567890",
+    "DOB": "24/12/2023",
+    "EmailId": "bajpaisandarbh@gmail.com",
+    "MobileNo": 8760760510,
+    "TransactionId": 77796541,
+    "Password": "Admin123",
+    "Amount": 10000,
+    "FMS": "Father",
+    "PresentAddress": {
+      "Vill": "Chhapra Jile",
+      "Country": "India",
+      "State": "South",
+      "District": "Chhapra",
+      "PS": "Chhapra",
+      "Pincode": "841301"
+    },
+    "ackno": "CYBER5231",
+    "Category": "Cyber Crime",
+    "SubCat": "Online Fraud",
+    "Date": "24/12/2023",
+    "Delay": "No",
+    "Place": "Home",
+    "brief2": "I received a call on my phone during midday. During the call, I was offered thousands of rupees in exchange for my bank details. The caller then tricked me into scanning my bank details, which resulted in a scam."
+  }
+}

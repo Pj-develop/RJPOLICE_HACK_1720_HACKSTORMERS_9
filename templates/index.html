@@ -48,7 +48,20 @@
         -moz-user-select: none;
         user-select: none;
       }
-
+    
+    
+    .image-container {
+        width: 150px; /* Adjust the width and height as needed */
+        height: 150px;
+        overflow: hidden; /* Ensure the image stays within the circular container */
+    }
+    
+    
+    .d-block {
+        width: auto; 
+        height: auto; 
+        border-radius: 12%;
+    }
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
@@ -124,6 +137,7 @@
     <link href="{% static 'css/carousel.css'%}" rel="stylesheet" />
   </head>
   <body>
+    <a id="top">
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="check2" viewBox="0 0 16 16">
         <path
@@ -249,7 +263,7 @@
           <div class="carousel-item active">
             <img
               src="{% static 'img/cycrime.png' %}"
-              class="d-block w-100"
+              class="d-block w-100 "
               alt="Cycrime image"
             />
 
@@ -410,11 +424,13 @@
 
       <!-- FOOTER -->
       <footer class="container">
-        <p class="float-end"><a href="#">Back to top</a></p>
+        <p class="float-end"><a href="#top">Back to top</a></p>
         <p>
-          &copy; 2024 Company, Inc. &middot;
-          <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
-        </p>
+          <small>
+            This is a project for Cyber Crime Portal. All Rights Reserved &copy;
+            2024
+          </small>
+        </p></p>
       </footer>
     </main>
     <script src="{% static 'js/bundle.min.js' %}"></script>

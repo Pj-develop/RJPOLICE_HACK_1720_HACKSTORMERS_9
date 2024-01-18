@@ -7,7 +7,7 @@
       <div class="col-12 col-md-9 col-lg-7 col-xl-6">
         <div class="card" style="border-radius: 15px">
           <div class="card-body p-5">
-            <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+            <h2 class="text-uppercase text-center mb-5">Register Your Case</h2>
             {% include 'partials/_messages.html' %}
           
 
@@ -15,7 +15,7 @@
               {% csrf_token %}
               <div class="form-outline mb-4">
                 <input
-                  value="{{request.POST.name}}"
+                  value="{{data.OBJ.LoginId}}"
                   type="text"
                   name="name"
                   placeholder="Name"
@@ -27,6 +27,7 @@
               <input
                   type="text"
                   name="UID"
+                  value="{{data.OBJ.UID}}"
                   placeholder="Any Document No. like Aadhar Card, Voter Id, etc."
                   id="UID"
                   class="form-control form-control-lg"
@@ -36,6 +37,7 @@
               <input
                   type="text"
                   name="sus"
+                  value="{{data.OBJ.SuspectedPerson}}"
                   placeholder="Suspected Person"
                   id="sus"
                   class="form-control form-control-lg"
@@ -43,8 +45,9 @@
                 </div>
                 <div class="form-outline mb-4">
               <input
-                  type="date"
-                  name="date"
+                  type="text"
+                  name="Date"
+                  value="{{data.OBJ.Date}}"
                   id="date"
                   class="form-control form-control-lg"
                 />
@@ -53,6 +56,7 @@
                   <input
                       type="text"
                       name="brief2"
+                      value="{{data.OBJ.brief2}}"
                       id="brief2"
                       placeholder="Tell About Your Case................."
                       class="form-control form-control-lg"
@@ -66,7 +70,7 @@
                           name="mob"
                           id="mob"
                           placeholder="Mobile No."
-    
+                          value="{{data.OBJ.MobileNo}}"
                           class="form-control form-control-lg"
                         />
                         </div>
@@ -75,6 +79,7 @@
                               type="text"
                               name="transID"
                               id="transID"
+                              value="{{data.OBJ.TransactionId}}"
                               placeholder="Transaction ID"
                               class="form-control form-control-lg"
                             />
@@ -84,6 +89,7 @@
                                   type="number"
                                   name="amount"
                                   id="amount"
+                                  value="{{data.OBJ.Amount}}"
                                   placeholder="Amount of Loss"
                                   class="form-control form-control-lg"
                                 />
@@ -91,7 +97,8 @@
                                 <div class="form-outline mb-4">
                                   <input
                                       type="text"
-                                      id="amount"
+                                      id="SubCat"
+                                      value="{{data.OBJ.SubCat}}"
                                       placeholder="Amount of Loss"
                                       class="form-control form-control-lg"
                                     />
@@ -103,7 +110,7 @@
                 <input
                   type="text"
                   id="username"
-                  value="{{request.POST.username}}"
+                  value="{{data.OBJ.LoginId}}"
                   name="username"
                   placeholder="Username"
                   class="form-control form-control-lg"
@@ -116,7 +123,7 @@
                 <input
                   type="email"
                   id="email"
-                  value="{{request.POST.email}}"
+                  value="{{data.OBJ.EmailId}}"
                   name="email"
                   placeholder="Email"
                   class="form-control form-control-lg"
@@ -128,6 +135,7 @@
                 <input
                   type="password"
                   name="password"
+                  value="{{data.OBJ.Password}}"
                   placeholder="Password"
                   id="password"
                   class="form-control form-control-lg"
@@ -138,6 +146,7 @@
                 <input
                   type="text"
                   id="repassword"
+                  value="{{data.OBJ.Password}}"
                   placeholder="Repeat Password"
                   class="form-control form-control-lg"
                 />
@@ -149,7 +158,7 @@
                   type="checkbox"
                   value=""
                   id="terms"
-                  
+                  checked
                   required
                 />
                 <label class="form-check-label" for="terms">
@@ -183,5 +192,6 @@
   </div>
 </div>
 <script src="{% static 'js/register.js' %}"></script>
+
 
 {% endblock%} {% block title %}Register {% endblock%}

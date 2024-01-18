@@ -1,2 +1,27 @@
-{% extends "base.html" %}
-<h1>I am Add expense page</h1>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speech to Text</title>
+  </head>
+  <body>
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <label for="audio_file">Upload Audio File:</label>
+      <input type="file" name="audio_file" accept=".wav" />
+
+      <br />
+
+      <label for="language">Select Language:</label>
+      <select name="language">
+        <option value="en-IN">English</option>
+        <option value="hi-IN">Hindi</option>
+        <!-- Add other language options as needed -->
+      </select>
+
+      <br />
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

@@ -10,7 +10,7 @@
         <div class="card" style="border-radius: 15px">
           <div class="card-body p-5">
             <br>
-            <h2 class="text-uppercase text-center mb-5">Login Into account</h2>
+            <h2 class="text-uppercase text-center mb-5">Track Your Case</h2>
             {% include 'partials/_messages.html' %}
           
 
@@ -21,7 +21,7 @@
                 <input
                   type="text"
                   id="username"
-                  value="{{request.POST.username}}"
+                  value="{{data.OBJ.LoginId}}"
                   name="username"
                   placeholder="Username"
                   class="form-control form-control-lg"
@@ -53,7 +53,7 @@
 
               <p class="text-center text-muted mt-5 mb-0">
                 Do not have an account?
-                <a href="{% url 'register'%}" class="fw-bold text-body"><u>Sign Up here</u></a>
+                <a href="{% url 'register'%}" class="fw-bold text-body "><u>Sign Up here</u></a>
               </p>
             </form>
            

@@ -60,4 +60,3 @@ def update_graph(contents):
 # Run the application on port 8050
 if __name__ == '__main__':
     app.run_server(port=8050)
-
