@@ -1,5 +1,5 @@
-SET DB_NAME=cyberdb
-SET DB_USER=postgres
-SET DB_PASSWORD=12345678
-SET DB_HOST=localhost
-SET DB_PORT=5432
+SET DB_NAME=db name
+SET DB_USER=db user name
+SET DB_PASSWORD=password
+SET DB_HOST=host
+SET DB_PORT=port
