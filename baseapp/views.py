@@ -14,7 +14,7 @@ import speech_recognition as sr
 # Initialize recognizer class (for recognizing the speech)
 
 import google.generativeai as genai
-genai.configure(api_key="AIzaSyDlv95Vd8NtDI3LVIlq_C0WWk2y8eUbxpM")
+genai.configure(api_key="api key")
 model = genai.GenerativeModel('gemini-pro')
 
 
