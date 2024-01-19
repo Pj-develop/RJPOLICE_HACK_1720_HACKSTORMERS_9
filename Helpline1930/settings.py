@@ -139,9 +139,9 @@ MESSAGE_TAGS={
 }
 
 #email stuff
-EMAIL_HOST="smtp.gmail.com"
-EMAIL_PORT=587
-EMAIL_HOST_USER="ppjj4047@gmail.com"
-EMAIL_HOST_PASSWORD="ttnytslfsofnsvhl"
+EMAIL_HOST="hots"
+EMAIL_PORT=port
+EMAIL_HOST_USER="emailid"
+EMAIL_HOST_PASSWORD="app password"
 EMAIL_USE_TLS=True
-DEFAULT_FROM_EMAIL="ppjj4047@gmail.com"
+DEFAULT_FROM_EMAIL="email ID"
